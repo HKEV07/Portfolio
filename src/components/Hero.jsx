@@ -6,7 +6,6 @@ import { space_man } from '../assets';
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
-  // Dynamic text animation for roles
   const roles = ["Frontend Developer", "UI Designer", "Web Creator"];
   const [currentRole, setCurrentRole] = useState(0);
 
@@ -17,7 +16,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Parallax effect
   const handleMouseMove = (e) => {
     setMousePosition({
       x: e.clientX / window.innerWidth,
@@ -36,7 +34,6 @@ const Hero = () => {
       className="relative bottom-20 min-h-screen w-full bg-gradient-to-br  overflow-hidden"
       onMouseMove={handleMouseMove}
     >
-      {/* Animated background gradient */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" 
           style={{ 
@@ -47,17 +44,14 @@ const Hero = () => {
         />
       </div>
 
-      {/* Main content container */}
       <div className="relative max-w-7xl mx-auto px-6 min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-          {/* Left column - Text content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Greeting */}
             <motion.div 
               className="inline-block bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
@@ -67,7 +61,6 @@ const Hero = () => {
               <h2 className="text-xl font-medium">Welcome to my portfolio</h2>
             </motion.div>
 
-            {/* Name and title */}
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-white">
                 Hi, I'm{' '}
@@ -89,13 +82,11 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Description */}
             <p className="text-gray-400 text-lg max-w-lg">
               Crafting beautiful, responsive, and user-friendly web experiences 
               with modern technologies and creative design solutions.
             </p>
 
-            {/* Social links */}
             <div className="flex gap-4">
               {socialLinks.map((link) => (
                 <motion.a
@@ -112,7 +103,6 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <motion.a
                 href="/resume.pdf"
@@ -135,7 +125,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right column - Animated illustration */}
           <motion.div
             className="relative hidden lg:block"
             animate={{ 
@@ -190,7 +179,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-4 w-full flex justify-center">
         <a href="#about" aria-label="Scroll to About section">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#915EFF] flex justify-center items-start p-2">

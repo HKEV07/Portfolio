@@ -4,11 +4,11 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = ({ 
-  rotationSpeedX = 0.01, // Slower rotation speed (original was ~0.05)
-  rotationSpeedY = 0.008, // Slower rotation speed (original was ~0.04)
+  rotationSpeedX = 0.01,
+  rotationSpeedY = 0.008, 
   starCount = 5000,
   starColor = '#f272c8',
-  starSize = 0.001,
+  starSize = 0.0008,
   radius = 1.2
 }) => {
   const ref = useRef();

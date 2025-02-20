@@ -11,10 +11,8 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@heroui/card": "^2.2.13",
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
-    "@react-three/postprocessing": "^2.19.1",
     "caniuse-lite": "^1.0.30001699",
     "dat.gui": "^0.7.9",
     "framer-motion": "^9.0.7",
@@ -28,7 +26,7 @@
     "react-router-dom": "^6.8.1",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.149.0"
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "@shadcn/ui": "^0.0.4",
